@@ -1,17 +1,23 @@
 # FitLife Studio – Fitness Booking Website
 
+## Team Members
+
+* Darshan Mahale
+* Shriyans Bharuka
+* Jai Jhunjhunwala
+
 ## Description
 
-This project is a basic fitness booking website created as part of the DTI Lab. It allows users to explore fitness classes, view details, and book sessions.
+This project is a basic fitness booking website created as part of the DTI Lab. It allows users to explore different fitness classes, view details, and book sessions easily.
 
 ## Features
 
 * Home page with navigation
 * Classes listing page
 * Class details page
-* Booking form
+* Booking form for users
 * Contact page
-* Responsive design
+* Clean and responsive design
 
 ## Technologies Used
 
