@@ -1,5 +1,4 @@
-
-
+/* css variables - includes extra error colours for form validation */
 :root {
   --primary:    #5B21B6;
   --accent:     #8B5CF6;
@@ -12,9 +11,10 @@
   --error-bg:   #FFEBEE;
 }
 
-
+/* reset default browser margin and padding */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* base body styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: var(--bg);
@@ -24,14 +24,14 @@ body {
 
 a { text-decoration: none; color: inherit; }
 
-
+/* max width wrapper, centred on the page */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px 60px;
 }
 
-   
+/* navbar - sticks to top while scrolling */
 .navbar {
   position: sticky;
   top: 0; z-index: 100;
@@ -61,6 +61,7 @@ a { text-decoration: none; color: inherit; }
   transition: color 0.3s ease;
 }
 
+/* animated underline that grows on hover */
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -74,6 +75,7 @@ a { text-decoration: none; color: inherit; }
 .nav-links a.active { color: var(--primary); font-weight: 600; }
 .nav-links a:hover::after { width: 100%; }
 
+/* hidden on desktop, shown on mobile */
 .hamburger {
   display: none;
   background: none;
@@ -83,6 +85,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--text-dark);
 }
 
+/* purple gradient banner at the top of the page */
 .page-header {
   background: linear-gradient(135deg, #3B0764, #7C3AED);
   color: #fff;
@@ -98,6 +101,7 @@ a { text-decoration: none; color: inherit; }
   color: rgba(255,255,255,0.85);
 }
 
+/* two column layout - studio info on left, form on right */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -105,14 +109,13 @@ a { text-decoration: none; color: inherit; }
   align-items: start;
 }
 
-
 .contact-info h2 {
   font-size: 1.6rem;
   color: var(--primary);
   margin-bottom: 28px;
 }
 
-
+/* each contact detail row (address, phone, email) */
 .info-item {
   display: flex;
   gap: 16px;
@@ -140,7 +143,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 0.95rem;
 }
 
-
+/* studio hours inside a card */
 .hours-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -156,7 +159,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 14px;
 }
 
-
+/* hours table with day and time columns */
 .hours-table {
   width: 100%;
   border-collapse: collapse;
@@ -173,7 +176,6 @@ a { text-decoration: none; color: inherit; }
   width: 120px;
 }
 
-
 .social-icons { margin-top: 4px; }
 
 .social-icons p {
@@ -187,7 +189,7 @@ a { text-decoration: none; color: inherit; }
 
 .social-row { display: flex; gap: 12px; }
 
-
+/* circular social media icon buttons */
 .social-circle {
   width: 42px;
   height: 42px;
@@ -203,12 +205,12 @@ a { text-decoration: none; color: inherit; }
 
 .social-circle:hover { transform: translateY(-2px); opacity: 0.85; }
 
-
+/* brand colours for each social platform */
 .fb { background: #1877F2; }
 .ig { background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCB045); }
 .yt { background: #FF0000; }
 
-
+/* white card wrapping the contact form */
 .contact-form-wrapper {
   background: var(--card-bg);
   border-radius: 12px;
@@ -223,7 +225,6 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 24px;
 }
 
-
 .form-group {
   margin-bottom: 18px;
 }
@@ -236,8 +237,10 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 6px;
 }
 
+/* red asterisk on required fields */
 .required { color: var(--error); margin-left: 2px; }
 
+/* shared styles for all input types */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group select,
@@ -255,6 +258,7 @@ a { text-decoration: none; color: inherit; }
   resize: vertical;
 }
 
+/* purple glow when a field is focused */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
@@ -262,7 +266,7 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 0 0 3px rgba(139,92,246,0.2);
 }
 
-
+/* red border and background when js marks a field invalid */
 .form-group input.invalid,
 .form-group select.invalid,
 .form-group textarea.invalid {
@@ -270,7 +274,7 @@ a { text-decoration: none; color: inherit; }
   background: var(--error-bg);
 }
 
-
+/* red error text shown below invalid fields */
 .error-msg {
   display: block;
   color: var(--error);
@@ -279,7 +283,7 @@ a { text-decoration: none; color: inherit; }
   min-height: 16px;
 }
 
-
+/* full width submit button */
 .btn-submit {
   width: 100%;
   padding: 13px;
@@ -299,8 +303,7 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(-2px);
 }
 
-
-  
+/* thank you message shown after successful form submit */
 .thankyou-msg {
   text-align: center;
   padding: 40px 20px;
@@ -322,7 +325,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 24px;
 }
 
-
+/* button styles */
 .btn {
   display: inline-block;
   padding: 11px 26px;
@@ -345,7 +348,7 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(-2px);
 }
 
-
+/* footer */
 .footer {
   background: var(--primary);
   color: #fff;
@@ -355,8 +358,7 @@ a { text-decoration: none; color: inherit; }
   margin-top: 40px;
 }
 
-
- 
+/* mobile - stack the two columns vertically */
 @media (max-width: 768px) {
   .hamburger { display: block; }
 
@@ -379,7 +381,7 @@ a { text-decoration: none; color: inherit; }
     border-bottom: 1px solid var(--border);
   }
 
-  
+  /* single column on mobile */
   .contact-grid { grid-template-columns: 1fr; }
 
   .contact-form-wrapper { padding: 24px; }

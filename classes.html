@@ -1,18 +1,21 @@
 <!DOCTYPE html>
+<!--It tells the browser the document is html5-->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--viewport tag makes the page work on mobile-->
   <title>FitLife Studio – Classes</title>
-  
   <link rel="stylesheet" href="css/classes.css" />
 </head>
 <body>
 
-  
+<!--Navbar(sticky navigation bar across all pages)-->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
+      <!--logo-->
       <a href="index.html" class="nav-logo">🏋️ FitLife Studio</a>
+      <!--hamburger icon for mobile-->
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
@@ -22,21 +25,16 @@
       </ul>
     </div>
   </nav>
-  
 
-
-  
+  <!--page title banner-->
   <div class="page-header">
     <h1>Our Classes</h1>
     <p>Find the perfect class to match your fitness goals.</p>
   </div>
 
-
-  
-  
+  <!--filter pills - js uses data-filter attribute to show/hide cards-->
   <div class="container">
     <div class="filter-bar" id="filterBar">
-      
       <button class="pill active" data-filter="all">All</button>
       <button class="pill" data-filter="yoga">Yoga</button>
       <button class="pill" data-filter="cardio">Cardio</button>
@@ -44,18 +42,14 @@
       <button class="pill" data-filter="strength">Strength Training</button>
     </div>
   </div>
-  
 
-
-  
+  <!--all class cards in a css grid-->
   <section class="classes-section">
     <div class="container">
       <div class="class-grid" id="classGrid">
 
-        
-        
+        <!--card 1 - yoga-->
         <div class="class-card" data-category="yoga">
-          
           <div class="class-img yoga-img">
             <div class="card-img-overlay"></div>
             <span class="difficulty-badge beginner">Beginner</span>
@@ -72,7 +66,7 @@
           </div>
         </div>
 
-        
+        <!--card 2 - cardio-->
         <div class="class-card" data-category="cardio">
           <div class="class-img cardio-img">
             <div class="card-img-overlay"></div>
@@ -90,7 +84,7 @@
           </div>
         </div>
 
-        
+        <!--card 3 - meditation-->
         <div class="class-card" data-category="meditation">
           <div class="class-img meditation-img">
             <div class="card-img-overlay"></div>
@@ -108,7 +102,7 @@
           </div>
         </div>
 
-        
+        <!--card 4 - strength-->
         <div class="class-card" data-category="strength">
           <div class="class-img strength-img">
             <div class="card-img-overlay"></div>
@@ -129,16 +123,13 @@
       </div>
     </div>
   </section>
-  
 
-
-  
+  <!--footer-->
   <footer class="footer">
     <p>© 2025 FitLife Studio. All rights reserved.</p>
   </footer>
 
-
-  
+  <!--page specific javascript-->
   <script src="js/classes.js"></script>
 </body>
 </html>

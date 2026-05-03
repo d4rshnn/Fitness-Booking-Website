@@ -1,18 +1,21 @@
 <!DOCTYPE html>
+<!--It tells the browser the document is html5-->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--viewport tag makes the page work on mobile-->
   <title>FitLife Studio – Class Details</title>
-  
   <link rel="stylesheet" href="css/class-details.css" />
 </head>
 <body>
 
-  
+<!--Navbar(sticky navigation bar across all pages)-->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
+      <!--logo-->
       <a href="index.html" class="nav-logo">🏋️ FitLife Studio</a>
+      <!--hamburger icon for mobile-->
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
@@ -22,18 +25,14 @@
       </ul>
     </div>
   </nav>
-  
 
-
-  
-  
+  <!--class hero(full width banner with class name and instructor info)-->
   <div class="class-hero">
-    
     <div class="hero-img yoga-hero-gradient">
       <div class="hero-overlay"></div>
       <div class="hero-info">
         <h1>Yoga</h1>
-        
+        <!--info badges - instructor, duration, level-->
         <div class="hero-badges">
           <span class="badge">👤 Priya Sharma</span>
           <span class="badge">⏱ 60 Minutes</span>
@@ -42,17 +41,15 @@
       </div>
     </div>
   </div>
-  
 
-
-  
+  <!--main content - left column and sticky sidebar on right-->
   <div class="container">
     <div class="details-grid">
 
-      
+      <!--left column(about, benefits, instructor)-->
       <div class="left-col">
 
-        
+        <!--about section-->
         <section class="section-block">
           <h2>About This Class</h2>
           <p>
@@ -73,7 +70,7 @@
           </p>
         </section>
 
-        
+        <!--class benefits list-->
         <section class="section-block">
           <h2>Class Benefits</h2>
           <ul class="benefits-list">
@@ -85,11 +82,11 @@
           </ul>
         </section>
 
-        
+        <!--instructor card-->
         <section class="section-block instructor-card">
           <h2>Your Instructor</h2>
           <div class="instructor-inner">
-            
+            <!--initials avatar-->
             <div class="instructor-avatar">PS</div>
             <div class="instructor-info">
               <h3>Priya Sharma</h3>
@@ -102,14 +99,13 @@
 
       </div>
 
-
-      
+      <!--right column - sticky sidebar with time slots and book button-->
       <div class="right-col">
         <div class="sidebar" id="sidebar">
 
           <h3>Available Time Slots</h3>
 
-          
+          <!--table wrapped for horizontal scroll on small screens-->
           <div class="table-wrapper">
             <table class="slots-table" id="slotsTable">
               <thead>
@@ -121,22 +117,21 @@
                 </tr>
               </thead>
               <tbody>
-                
+                <!--morning slot-->
                 <tr>
                   <td>Morning<br /><small>6 – 8 AM</small></td>
                   <td>Mon, Wed, Fri</td>
-                  
                   <td class="status open">Open</td>
                   <td>8 spots</td>
                 </tr>
-                
+                <!--afternoon slot-->
                 <tr>
                   <td>Afternoon<br /><small>12 – 2 PM</small></td>
                   <td>Tue, Thu</td>
                   <td class="status limited">Limited</td>
                   <td>3 spots</td>
                 </tr>
-                
+                <!--evening slot-->
                 <tr>
                   <td>Evening<br /><small>6 – 8 PM</small></td>
                   <td>Daily</td>
@@ -147,7 +142,7 @@
             </table>
           </div>
 
-          
+          <!--book button - js saves class to localStorage before navigating-->
           <a href="booking.html" class="btn btn-book" id="bookBtn">
             Book This Class
           </a>
@@ -157,16 +152,13 @@
 
     </div>
   </div>
-  
 
-
-  
+  <!--footer-->
   <footer class="footer">
     <p>© 2025 FitLife Studio. All rights reserved.</p>
   </footer>
 
-
-  
+  <!--page specific javascript-->
   <script src="js/class-details.js"></script>
 </body>
 </html>

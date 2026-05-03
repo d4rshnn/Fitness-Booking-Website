@@ -1,5 +1,4 @@
-
-
+/* css variables for consistent theming across the page */
 :root {
   --primary:    #5B21B6;
   --accent:     #8B5CF6;
@@ -10,13 +9,14 @@
   --border:     #E5E7EB;
 }
 
-
+/* reset default browser margin and padding */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* base body styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--bg);
@@ -31,14 +31,14 @@ a {
 
 img { max-width: 100%; display: block; }
 
-
+/* max width wrapper, centred on the page */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-
+/* navbar - sticks to top while scrolling */
 .navbar {
   position: sticky;
   top: 0;
@@ -58,14 +58,14 @@ img { max-width: 100%; display: block; }
   justify-content: space-between;
 }
 
-
+/* logo text */
 .nav-logo {
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--primary);
 }
 
-
+/* desktop nav links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -79,7 +79,7 @@ img { max-width: 100%; display: block; }
   transition: color 0.3s ease;
 }
 
-
+/* animated underline that grows on hover */
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -97,7 +97,7 @@ img { max-width: 100%; display: block; }
 
 .nav-links a:hover::after { width: 100%; }
 
-
+/* hidden on desktop, shown on mobile */
 .hamburger {
   display: none;
   background: none;
@@ -107,7 +107,7 @@ img { max-width: 100%; display: block; }
   color: var(--text-dark);
 }
 
-
+/* base button styles */
 .btn {
   display: inline-block;
   padding: 12px 28px;
@@ -119,7 +119,7 @@ img { max-width: 100%; display: block; }
   border: 2px solid transparent;
 }
 
-
+/* filled purple button */
 .btn-primary {
   background: var(--primary);
   color: #fff;
@@ -131,7 +131,7 @@ img { max-width: 100%; display: block; }
   transform: translateY(-2px);
 }
 
-
+/* white button for use on dark backgrounds */
 .btn-light {
   background: #fff;
   color: var(--primary);
@@ -143,7 +143,7 @@ img { max-width: 100%; display: block; }
   transform: translateY(-2px);
 }
 
-
+/* transparent button with purple border */
 .btn-outline {
   background: transparent;
   color: var(--primary);
@@ -156,13 +156,11 @@ img { max-width: 100%; display: block; }
   transform: translateY(-2px);
 }
 
-
+/* hero section - full screen with background image */
 .hero {
   position: relative;
   min-height: 90vh;
-  
   background: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1600&q=80&fit=crop') center/cover no-repeat;
-  
   background-color: #3B0764;
   display: flex;
   align-items: center;
@@ -171,34 +169,32 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
-
+/* semi-transparent overlay to darken the image so text is readable */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.52);
 }
 
-
+/* starts invisible - js adds .loaded class to trigger the fade-in */
 .hero-content {
-  position: relative; 
+  position: relative;
   z-index: 1;
   color: #fff;
   max-width: 720px;
   padding: 0 24px;
-
-  
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 1s ease, transform 1s ease;
 }
 
-
+/* final visible state after the animation runs */
 .hero-content.loaded {
   opacity: 1;
   transform: translateY(0);
 }
 
-
+/* small pill tag above the main heading */
 .hero-tag {
   display: inline-block;
   background: rgba(139, 92, 246, 0.25);
@@ -226,7 +222,7 @@ img { max-width: 100%; display: block; }
   color: rgba(255,255,255,0.85);
 }
 
-
+/* row of two buttons in the hero */
 .hero-buttons {
   display: flex;
   gap: 16px;
@@ -235,8 +231,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 48px;
 }
 
-
-
+/* frosted glass stats bar */
 .hero-stats {
   display: flex;
   align-items: center;
@@ -246,9 +241,8 @@ img { max-width: 100%; display: block; }
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 12px;
   padding: 16px 32px;
-  backdrop-filter: blur(6px); 
+  backdrop-filter: blur(6px);
   flex-wrap: wrap;
-  gap: 0;
 }
 
 .hero-stat {
@@ -273,20 +267,20 @@ img { max-width: 100%; display: block; }
   margin-top: 4px;
 }
 
-
+/* thin vertical line between each stat */
 .hero-stat-divider {
   width: 1px;
   height: 36px;
   background: rgba(255,255,255,0.25);
 }
 
-
+/* why choose us section */
 .about {
   background: var(--card-bg);
   padding: 60px 0;
 }
 
-
+/* centered heading with accent underline */
 .section-title {
   text-align: center;
   font-size: 2rem;
@@ -295,7 +289,7 @@ img { max-width: 100%; display: block; }
   position: relative;
 }
 
-
+/* short purple line drawn under each section title */
 .section-title::after {
   content: '';
   display: block;
@@ -306,7 +300,7 @@ img { max-width: 100%; display: block; }
   border-radius: 2px;
 }
 
-
+/* 3 feature cards in a flex row */
 .features {
   display: flex;
   gap: 24px;
@@ -348,13 +342,13 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
 }
 
-
+/* popular classes section */
 .featured-classes {
   background: var(--bg);
   padding: 60px 0;
 }
 
-
+/* responsive grid for class cards */
 .class-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -374,14 +368,14 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 8px 24px rgba(0,0,0,0.14);
 }
 
-
+/* image area at the top of each card */
 .class-img {
   height: 200px;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-
+/* gradient overlay on card images so the tag text is readable */
 .card-img-overlay {
   position: absolute;
   inset: 0;
@@ -391,7 +385,7 @@ img { max-width: 100%; display: block; }
   z-index: 1;
 }
 
-
+/* category label in the bottom left of the image */
 .card-category-tag {
   position: absolute;
   bottom: 12px;
@@ -409,30 +403,25 @@ img { max-width: 100%; display: block; }
   backdrop-filter: blur(4px);
 }
 
-
-
-
+/* background images per class type, fallback colour if image fails to load */
 .yoga-img {
   background: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80&fit=crop') center/cover no-repeat;
-  background-color: #00695C; 
+  background-color: #00695C;
 }
-
 
 .cardio-img {
   background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80&fit=crop') center/cover no-repeat;
-  background-color: #E65100; 
+  background-color: #E65100;
 }
-
 
 .meditation-img {
   background: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80&fit=crop') center/cover no-repeat;
-  background-color: #4A148C; 
+  background-color: #4A148C;
 }
-
 
 .strength-img {
   background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80&fit=crop') center/cover no-repeat;
-  background-color: #B71C1C; 
+  background-color: #B71C1C;
 }
 
 .class-body {
@@ -451,7 +440,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 16px;
 }
 
-
+/* footer */
 .footer {
   background: var(--primary);
   color: #fff;
@@ -460,13 +449,12 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
 }
 
-
+/* mobile styles - breakpoint at 768px */
 @media (max-width: 768px) {
 
-  
+  /* show hamburger, hide nav links */
   .hamburger { display: block; }
 
-  
   .nav-links {
     display: none;
     position: absolute;
@@ -478,7 +466,7 @@ img { max-width: 100%; display: block; }
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
 
-  
+  /* nav-open class added by js to show the menu */
   .nav-links.nav-open {
     display: flex;
   }
@@ -489,10 +477,10 @@ img { max-width: 100%; display: block; }
     border-bottom: 1px solid var(--border);
   }
 
-  
+  /* stack feature cards vertically */
   .features { flex-direction: column; align-items: center; }
 
-  
+  /* single column class grid */
   .class-grid { grid-template-columns: 1fr; }
 
   .hero-content h1 { font-size: 2rem; }

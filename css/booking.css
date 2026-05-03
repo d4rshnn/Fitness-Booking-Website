@@ -1,4 +1,4 @@
-
+/* css variables - includes extra error colours for form validation */
 :root {
   --primary:    #5B21B6;
   --accent:     #8B5CF6;
@@ -11,9 +11,10 @@
   --error-bg:   #FFEBEE;
 }
 
-
+/* reset default browser margin and padding */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* base body styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: var(--bg);
@@ -23,13 +24,14 @@ body {
 
 a { text-decoration: none; color: inherit; }
 
-
+/* narrower max width for the form layout */
 .container {
   max-width: 700px;
   margin: 0 auto;
   padding: 0 24px 60px;
 }
 
+/* navbar - sticks to top while scrolling */
 .navbar {
   position: sticky;
   top: 0; z-index: 100;
@@ -59,6 +61,7 @@ a { text-decoration: none; color: inherit; }
   transition: color 0.3s ease;
 }
 
+/* animated underline that grows on hover */
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -72,6 +75,7 @@ a { text-decoration: none; color: inherit; }
 .nav-links a.active { color: var(--primary); font-weight: 600; }
 .nav-links a:hover::after { width: 100%; }
 
+/* hidden on desktop, shown on mobile */
 .hamburger {
   display: none;
   background: none;
@@ -81,9 +85,9 @@ a { text-decoration: none; color: inherit; }
   color: var(--text-dark);
 }
 
-
+/* purple gradient banner at the top of the page */
 .page-header {
-  background: linear-gradient(135deg, #3B0764, #7C3AED);
+  background: linear-gradient(135deg, #3b0862, #7C3AED);
   color: #fff;
   text-align: center;
   padding: 60px 24px;
@@ -97,7 +101,7 @@ a { text-decoration: none; color: inherit; }
   color: rgba(255,255,255,0.85);
 }
 
-
+/* white card wrapping the entire booking form */
 .form-card {
   background: var(--card-bg);
   border-radius: 12px;
@@ -106,7 +110,7 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid var(--border);
 }
 
-
+/* each logical section of the form, separated by a bottom border */
 .form-section {
   margin-bottom: 36px;
   padding-bottom: 28px;
@@ -115,6 +119,7 @@ a { text-decoration: none; color: inherit; }
 
 .form-section:last-of-type { border-bottom: none; }
 
+/* section heading with a left purple accent bar */
 .form-section-title {
   font-size: 1.1rem;
   font-weight: 700;
@@ -124,13 +129,12 @@ a { text-decoration: none; color: inherit; }
   border-left: 4px solid var(--accent);
 }
 
-
+/* muted (optional) label next to section title */
 .optional {
   font-weight: 400;
   font-size: 0.85rem;
   color: var(--text-muted);
 }
-
 
 .form-group {
   margin-bottom: 20px;
@@ -144,10 +148,10 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 6px;
 }
 
-
+/* red asterisk on required fields */
 .required { color: var(--error); margin-left: 2px; }
 
-
+/* shared styles for all input types */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="tel"],
@@ -165,7 +169,7 @@ a { text-decoration: none; color: inherit; }
   outline: none;
 }
 
-
+/* purple glow when a field is focused */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
@@ -173,7 +177,7 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 0 0 3px rgba(139,92,246,0.2);
 }
 
-
+/* red border and background when js marks a field invalid */
 .form-group input.invalid,
 .form-group select.invalid,
 .form-group textarea.invalid {
@@ -181,24 +185,22 @@ a { text-decoration: none; color: inherit; }
   background: var(--error-bg);
 }
 
-
+/* red error text shown below invalid fields */
 .error-msg {
   display: block;
   color: var(--error);
   font-size: 0.8rem;
   margin-top: 4px;
-  min-height: 18px; 
+  min-height: 18px;
 }
 
-
-
+/* row of day checkboxes */
 .checkbox-row {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
   margin-top: 4px;
 }
-
 
 .checkbox-label {
   display: flex;
@@ -209,20 +211,20 @@ a { text-decoration: none; color: inherit; }
   user-select: none;
 }
 
+/* checkbox styled with the primary purple colour */
 .checkbox-label input[type="checkbox"] {
   width: 16px;
   height: 16px;
-  accent-color: var(--primary); 
+  accent-color: var(--primary);
   cursor: pointer;
 }
-
 
 .repeat-label {
   margin-top: 8px;
   font-size: 0.9rem;
 }
 
-
+/* light purple summary box that updates live as the user fills the form */
 .summary-box {
   background: #EDE9FE;
   border: 1.5px solid var(--accent);
@@ -254,7 +256,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--text-muted);
 }
 
-
+/* full width submit button */
 .btn-submit {
   width: 100%;
   padding: 14px;
@@ -273,6 +275,7 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(-2px);
 }
 
+/* success card shown after booking, hidden by default */
 .success-card {
   background: var(--card-bg);
   border-radius: 12px;
@@ -281,7 +284,7 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
-
+/* purple circle containing the tick icon */
 .checkmark-circle {
   width: 80px;
   height: 80px;
@@ -313,7 +316,7 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.8;
 }
 
-
+/* button styles */
 .btn {
   display: inline-block;
   padding: 12px 28px;
@@ -336,7 +339,7 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(-2px);
 }
 
-
+/* footer */
 .footer {
   background: var(--primary);
   color: #fff;
@@ -346,7 +349,7 @@ a { text-decoration: none; color: inherit; }
   margin-top: 60px;
 }
 
-
+/* mobile styles - breakpoint at 768px */
 @media (max-width: 768px) {
   .hamburger { display: block; }
 

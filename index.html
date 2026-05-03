@@ -1,25 +1,22 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
+<!--It tells the browser the document is html5--> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--viewport tag makes the page work on mobile-->
   <title>FitLife Studio - Home</title>
-  
   <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
 
-  
-  
+<!--Navbar(Sticky navigation bar across all pages)-->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      
+      <!--logo-->
       <a href="index.html" class="nav-logo">🏋️ FitLife Studio</a>
-
-      
+      <!--hamburger icon for mobile-->
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
-
-      
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="classes.html">Classes</a></li>
@@ -28,26 +25,20 @@
       </ul>
     </div>
   </nav>
-  
-
-
-  
-  
+ 
+  <!--hero section(full screen hero with background photo)-->
   <section class="hero" id="hero">
     <div class="hero-overlay"></div>
-    <div class="hero-content" id="heroContent">
-      
+    <div class="hero-content" id="heroContent">  
       <span class="hero-tag">Mumbai's #1 Fitness Studio</span>
       <h1>Welcome to FitLife Studio</h1>
       <p>Transform your body and mind with expert-led yoga, cardio,<br />
          and strength training classes.</p>
-      
       <div class="hero-buttons">
         <a href="classes.html" class="btn btn-light">Explore Classes</a>
         <a href="booking.html" class="btn btn-primary">Book Now</a>
       </div>
-
-      
+      <!--highlighting the important things in the hero section-->
       <div class="hero-stats">
         <div class="hero-stat">
           <strong>500+</strong>
@@ -67,54 +58,42 @@
     </div>
   </section>
   
-
-
-  
+  <!--why choose us-->
   <section class="about" id="about">
     <div class="container">
       <h2 class="section-title">Why Choose FitLife?</h2>
-
-      
+      <!--3 feature boxes in flex row-->
       <div class="features">
-
         <div class="feature-card">
           <div class="feature-icon">🧘</div>
           <h3>Expert Instructors</h3>
           <p>Learn from certified professionals with years of hands-on
              experience in yoga and fitness.</p>
         </div>
-
         <div class="feature-card">
           <div class="feature-icon">📅</div>
           <h3>Flexible Scheduling</h3>
           <p>Morning, afternoon, and evening sessions so you can train
              on your own timetable.</p>
         </div>
-
         <div class="feature-card">
           <div class="feature-icon">💪</div>
           <h3>All Fitness Levels</h3>
           <p>Beginner-friendly to advanced programs — every body is
              welcome at FitLife Studio.</p>
         </div>
-
       </div>
     </div>
   </section>
-  
 
-
-  
+  <!--popular classes-->
   <section class="featured-classes" id="classes">
     <div class="container">
       <h2 class="section-title">Our Popular Classes</h2>
-
-      
+      <!--css grid -->
       <div class="class-grid">
-
-        
+        <!--card 1 - yoga-->
         <div class="class-card">
-          
           <div class="class-img yoga-img">
             <div class="card-img-overlay"></div>
             <span class="card-category-tag">Yoga</span>
@@ -125,8 +104,7 @@
             <a href="class-details.html" class="btn btn-outline">View Details</a>
           </div>
         </div>
-
-        
+        <!--card 2 - cardio-->
         <div class="class-card">
           <div class="class-img cardio-img">
             <div class="card-img-overlay"></div>
@@ -138,8 +116,7 @@
             <a href="class-details.html" class="btn btn-outline">View Details</a>
           </div>
         </div>
-
-        
+        <!--card 3 - meditation-->
         <div class="class-card">
           <div class="class-img meditation-img">
             <div class="card-img-overlay"></div>
@@ -151,8 +128,7 @@
             <a href="class-details.html" class="btn btn-outline">View Details</a>
           </div>
         </div>
-
-        
+        <!--card 4 - strength-->
         <div class="class-card">
           <div class="class-img strength-img">
             <div class="card-img-overlay"></div>
@@ -164,21 +140,16 @@
             <a href="class-details.html" class="btn btn-outline">View Details</a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
   
-
-
-  
+  <!--footer-->
   <footer class="footer">
     <p>© 2025 FitLife Studio. All rights reserved.</p>
   </footer>
-  
 
-
-  
+  <!--page specific javascript-->
   <script src="js/index.js"></script>
 </body>
 </html>

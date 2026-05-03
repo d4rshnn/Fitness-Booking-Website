@@ -1,6 +1,4 @@
-
-
-
+/* css variables for consistent theming */
 :root {
   --primary:    #5B21B6;
   --accent:     #8B5CF6;
@@ -11,9 +9,10 @@
   --border:     #E5E7EB;
 }
 
-
+/* reset default browser margin and padding */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* base body styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: var(--bg);
@@ -23,13 +22,14 @@ body {
 
 a { text-decoration: none; color: inherit; }
 
-
+/* max width wrapper, centred on the page */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
+/* navbar - sticks to top while scrolling */
 .navbar {
   position: sticky;
   top: 0; z-index: 100;
@@ -59,6 +59,7 @@ a { text-decoration: none; color: inherit; }
   transition: color 0.3s ease;
 }
 
+/* animated underline that grows on hover */
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -72,6 +73,7 @@ a { text-decoration: none; color: inherit; }
 .nav-links a.active { color: var(--primary); font-weight: 600; }
 .nav-links a:hover::after { width: 100%; }
 
+/* hidden on desktop, shown on mobile */
 .hamburger {
   display: none;
   background: none;
@@ -81,7 +83,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--text-dark);
 }
 
-
+/* full width hero banner at the top of the page */
 .class-hero { width: 100%; }
 
 .hero-img {
@@ -91,13 +93,13 @@ a { text-decoration: none; color: inherit; }
   align-items: flex-end;
 }
 
-
+/* yoga class hero background image */
 .yoga-hero-gradient {
   background: url('https://images.unsplash.com/photo-1588286840104-8957b019727f?w=1400&q=80&fit=crop') center/cover no-repeat;
-  background-color: #004D40; 
+  background-color: #004D40;
 }
 
-
+/* gradient overlay - darker at bottom so class name text is readable */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -106,7 +108,7 @@ a { text-decoration: none; color: inherit; }
     rgba(0,0,0,0.25) 100%);
 }
 
-
+/* class name and badge row, positioned above the overlay */
 .hero-info {
   position: relative;
   z-index: 1;
@@ -125,6 +127,7 @@ a { text-decoration: none; color: inherit; }
   flex-wrap: wrap;
 }
 
+/* frosted glass badge for instructor, duration, level */
 .badge {
   background: rgba(255,255,255,0.2);
   border: 1px solid rgba(255,255,255,0.4);
@@ -134,7 +137,7 @@ a { text-decoration: none; color: inherit; }
   backdrop-filter: blur(4px);
 }
 
-
+/* 3fr 2fr grid - main content on the left, sticky sidebar on the right */
 .details-grid {
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -143,7 +146,7 @@ a { text-decoration: none; color: inherit; }
   align-items: start;
 }
 
-
+/* each content block in the left column */
 .section-block {
   margin-bottom: 36px;
 }
@@ -162,7 +165,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 0.95rem;
 }
 
-
+/* benefits list with divider lines between items */
 .benefits-list {
   list-style: none;
   padding: 0;
@@ -177,7 +180,7 @@ a { text-decoration: none; color: inherit; }
 
 .benefits-list li:last-child { border-bottom: none; }
 
-
+/* instructor card with shadow */
 .instructor-card {
   background: var(--card-bg);
   border-radius: 12px;
@@ -192,8 +195,7 @@ a { text-decoration: none; color: inherit; }
   margin-top: 16px;
 }
 
-
-
+/* circular avatar showing instructor initials */
 .instructor-avatar {
   width: 60px;
   height: 60px;
@@ -225,10 +227,10 @@ a { text-decoration: none; color: inherit; }
   color: var(--text-dark);
 }
 
-
+/* sticky sidebar - stays visible while the user scrolls the left column */
 .sidebar {
   position: sticky;
-  top: 84px; 
+  top: 84px; /* 64px navbar height + 20px gap */
   background: var(--card-bg);
   border-radius: 12px;
   padding: 28px;
@@ -242,9 +244,9 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 20px;
 }
 
-
+/* wrapper allows horizontal scroll on very narrow screens */
 .table-wrapper {
-  overflow-x: auto; 
+  overflow-x: auto;
   margin-bottom: 24px;
 }
 
@@ -275,11 +277,10 @@ a { text-decoration: none; color: inherit; }
 
 .slots-table small { color: var(--text-muted); font-size: 0.78rem; }
 
-
 .slots-table tbody tr { transition: background 0.2s ease; }
 .slots-table tbody tr:hover { background: #F5F3FF; }
 
-
+/* colour coded slot status badges */
 .status {
   padding: 3px 10px;
   border-radius: 999px;
@@ -292,7 +293,7 @@ a { text-decoration: none; color: inherit; }
 .status.limited   { background: #FFF3E0; color: #E65100; }
 .status.available { background: #E3F2FD; color: #1565C0; }
 
-
+/* full width book button at the bottom of the sidebar */
 .btn-book {
   display: block;
   width: 100%;
@@ -313,7 +314,7 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(-2px);
 }
 
-
+/* footer */
 .footer {
   background: var(--primary);
   color: #fff;
@@ -322,6 +323,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 0.9rem;
 }
 
+/* mobile - sidebar goes static, grid becomes single column */
 @media (max-width: 768px) {
   .hamburger { display: block; }
 
@@ -344,12 +346,12 @@ a { text-decoration: none; color: inherit; }
     border-bottom: 1px solid var(--border);
   }
 
-  
+  /* stack columns vertically */
   .details-grid {
     grid-template-columns: 1fr;
   }
 
-  
+  /* sidebar no longer needs to stick when it's below the content */
   .sidebar { position: static; }
 
   .hero-info { padding: 20px; }

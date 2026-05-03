@@ -1,5 +1,4 @@
-
-
+/* css variables for consistent theming */
 :root {
   --primary:    #5B21B6;
   --accent:     #8B5CF6;
@@ -10,9 +9,10 @@
   --border:     #E5E7EB;
 }
 
-
+/* reset default browser margin and padding */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* base body styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: var(--bg);
@@ -22,14 +22,14 @@ body {
 
 a { text-decoration: none; color: inherit; }
 
-
+/* max width wrapper, centred on the page */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-
+/* navbar - sticks to top while scrolling */
 .navbar {
   position: sticky;
   top: 0; z-index: 100;
@@ -67,6 +67,7 @@ a { text-decoration: none; color: inherit; }
   transition: color 0.3s ease;
 }
 
+/* animated underline that grows on hover */
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -80,6 +81,7 @@ a { text-decoration: none; color: inherit; }
 .nav-links a.active { color: var(--primary); font-weight: 600; }
 .nav-links a:hover::after { width: 100%; }
 
+/* hidden on desktop, shown on mobile */
 .hamburger {
   display: none;
   background: none;
@@ -89,7 +91,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--text-dark);
 }
 
-
+/* purple gradient banner at the top of the page */
 .page-header {
   background: linear-gradient(135deg, #3B0764, #7C3AED);
   color: #fff;
@@ -107,7 +109,7 @@ a { text-decoration: none; color: inherit; }
   color: rgba(255,255,255,0.85);
 }
 
-
+/* row of category filter buttons */
 .filter-bar {
   display: flex;
   gap: 12px;
@@ -115,10 +117,10 @@ a { text-decoration: none; color: inherit; }
   padding: 32px 0 8px;
 }
 
-
+/* individual filter pill button */
 .pill {
   padding: 8px 20px;
-  border-radius: 999px; 
+  border-radius: 999px;
   border: 2px solid var(--primary);
   background: transparent;
   color: var(--primary);
@@ -133,23 +135,22 @@ a { text-decoration: none; color: inherit; }
   color: #fff;
 }
 
-
+/* currently selected filter pill */
 .pill.active {
   background: var(--primary);
   color: #fff;
 }
 
-
 .classes-section {
   padding: 24px 0 60px;
 }
 
+/* responsive grid of class cards */
 .class-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
 }
-
 
 .class-card {
   background: var(--card-bg);
@@ -165,17 +166,17 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 8px 24px rgba(0,0,0,0.14);
 }
 
-
+/* js adds this class to hide cards that don't match the active filter */
 .class-card.hidden { display: none; }
 
-
+/* image area at the top of each card */
 .class-img {
   height: 200px;
   position: relative;
   overflow: hidden;
 }
 
-
+/* background images per class type, fallback colour if image fails to load */
 .yoga-img {
   background: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80&fit=crop') center/cover no-repeat;
   background-color: #00695C;
@@ -196,7 +197,7 @@ a { text-decoration: none; color: inherit; }
   background-color: #B71C1C;
 }
 
-
+/* gradient overlay on the card image */
 .card-img-overlay {
   position: absolute;
   inset: 0;
@@ -206,11 +207,11 @@ a { text-decoration: none; color: inherit; }
   z-index: 1;
 }
 
-
+/* coloured difficulty badge in the top right corner of the image */
 .difficulty-badge {
   position: absolute;
   top: 12px; right: 12px;
-  z-index: 2; 
+  z-index: 2;
   padding: 4px 10px;
   border-radius: 999px;
   font-size: 0.75rem;
@@ -218,10 +219,10 @@ a { text-decoration: none; color: inherit; }
   color: #fff;
 }
 
+/* colour per difficulty level */
 .difficulty-badge.beginner     { background: #5B21B6; }
 .difficulty-badge.intermediate { background: #F57C00; }
 .difficulty-badge.advanced     { background: #B71C1C; }
-
 
 .class-body {
   padding: 20px;
@@ -245,7 +246,7 @@ a { text-decoration: none; color: inherit; }
   margin: 10px 0 18px;
 }
 
-
+/* button styles */
 .btn {
   display: inline-block;
   padding: 10px 22px;
@@ -268,7 +269,7 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(-2px);
 }
 
-
+/* footer */
 .footer {
   background: var(--primary);
   color: #fff;
@@ -277,7 +278,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 0.9rem;
 }
 
-
+/* mobile styles - breakpoint at 768px */
 @media (max-width: 768px) {
   .hamburger { display: block; }
 
@@ -300,7 +301,7 @@ a { text-decoration: none; color: inherit; }
     border-bottom: 1px solid var(--border);
   }
 
-  
+  /* single column grid on mobile */
   .class-grid { grid-template-columns: 1fr; }
 
   .page-header h1 { font-size: 1.8rem; }
