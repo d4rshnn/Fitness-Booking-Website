@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitLife Studio – Classes</title>
+  
+  <link rel="stylesheet" href="css/classes.css" />
+</head>
+<body>
+
+  
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🏋️ FitLife Studio</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="classes.html" class="active">Classes</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+
+  
+  <div class="page-header">
+    <h1>Our Classes</h1>
+    <p>Find the perfect class to match your fitness goals.</p>
+  </div>
+
+
+  
+  
+  <div class="container">
+    <div class="filter-bar" id="filterBar">
+      
+      <button class="pill active" data-filter="all">All</button>
+      <button class="pill" data-filter="yoga">Yoga</button>
+      <button class="pill" data-filter="cardio">Cardio</button>
+      <button class="pill" data-filter="meditation">Meditation</button>
+      <button class="pill" data-filter="strength">Strength Training</button>
+    </div>
+  </div>
+  
+
+
+  
+  <section class="classes-section">
+    <div class="container">
+      <div class="class-grid" id="classGrid">
+
+        
+        
+        <div class="class-card" data-category="yoga">
+          
+          <div class="class-img yoga-img">
+            <div class="card-img-overlay"></div>
+            <span class="difficulty-badge beginner">Beginner</span>
+          </div>
+          <div class="class-body">
+            <h3>Yoga</h3>
+            <p class="meta">⏱ 60 minutes</p>
+            <p class="meta">👤 Priya Sharma</p>
+            <p class="description">
+              A traditional yoga practice that focuses on physical postures,
+              breathing techniques, and meditation for holistic wellbeing.
+            </p>
+            <a href="class-details.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+
+        
+        <div class="class-card" data-category="cardio">
+          <div class="class-img cardio-img">
+            <div class="card-img-overlay"></div>
+            <span class="difficulty-badge intermediate">Intermediate</span>
+          </div>
+          <div class="class-body">
+            <h3>High-Energy Cardio</h3>
+            <p class="meta">⏱ 45 minutes</p>
+            <p class="meta">👤 Rahul Verma</p>
+            <p class="description">
+              An upbeat cardio workout combining HIIT, dance moves,
+              and aerobic exercises to torch calories and build endurance.
+            </p>
+            <a href="class-details.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+
+        
+        <div class="class-card" data-category="meditation">
+          <div class="class-img meditation-img">
+            <div class="card-img-overlay"></div>
+            <span class="difficulty-badge beginner">Beginner</span>
+          </div>
+          <div class="class-body">
+            <h3>Mindful Meditation</h3>
+            <p class="meta">⏱ 30 minutes</p>
+            <p class="meta">👤 Ananya Nair</p>
+            <p class="description">
+              Guided mindfulness sessions to reduce stress, improve focus,
+              and bring clarity to your daily life through breathing and visualization.
+            </p>
+            <a href="class-details.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+
+        
+        <div class="class-card" data-category="strength">
+          <div class="class-img strength-img">
+            <div class="card-img-overlay"></div>
+            <span class="difficulty-badge advanced">Advanced</span>
+          </div>
+          <div class="class-body">
+            <h3>Strength Training</h3>
+            <p class="meta">⏱ 75 minutes</p>
+            <p class="meta">👤 Arjun Mehta</p>
+            <p class="description">
+              Progressive resistance training with free weights and machines
+              to build muscle, improve posture, and increase overall strength.
+            </p>
+            <a href="class-details.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+
+
+  
+  <footer class="footer">
+    <p>© 2025 FitLife Studio. All rights reserved.</p>
+  </footer>
+
+
+  
+  <script src="js/classes.js"></script>
+</body>
+</html>

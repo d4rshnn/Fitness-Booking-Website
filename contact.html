@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitLife Studio – Contact</title>
+  
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🏋️ FitLife Studio</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+
+  
+  <div class="page-header">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you. Reach out anytime!</p>
+  </div>
+
+
+  
+  <div class="container">
+    <div class="contact-grid">
+
+      
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+
+        
+        <div class="info-item">
+          <span class="info-icon">📍</span>
+          <div>
+            <strong>Address</strong>
+            <p>42, Fitness Lane, Bandra West,<br />Mumbai – 400050</p>
+          </div>
+        </div>
+
+        
+        <div class="info-item">
+          <span class="info-icon">📞</span>
+          <div>
+            <strong>Phone</strong>
+            <p>+91 98765 43210</p>
+          </div>
+        </div>
+
+        
+        <div class="info-item">
+          <span class="info-icon">✉️</span>
+          <div>
+            <strong>Email</strong>
+            <p>hello@fitlifestudio.in</p>
+          </div>
+        </div>
+
+        
+        <div class="hours-card">
+          <h3>🕐 Studio Hours</h3>
+          <table class="hours-table">
+            <tr>
+              <td>Mon – Fri</td>
+              <td>5:30 AM – 9:00 PM</td>
+            </tr>
+            <tr>
+              <td>Sat – Sun</td>
+              <td>6:00 AM – 6:00 PM</td>
+            </tr>
+          </table>
+        </div>
+
+        
+        <div class="social-icons">
+          <p><strong>Follow Us</strong></p>
+          <div class="social-row">
+            
+            <a href="#" class="social-circle fb" aria-label="Facebook">f</a>
+            <a href="#" class="social-circle ig" aria-label="Instagram">in</a>
+            <a href="#" class="social-circle yt" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+
+      </div>
+
+
+      
+      <div class="contact-form-wrapper">
+
+        
+        <form id="contactForm" novalidate>
+          <h2>Send Us a Message</h2>
+
+          
+          <div class="form-group">
+            <label for="cName">Your Name <span class="required">*</span></label>
+            <input type="text" id="cName" placeholder="e.g. Sunita Iyer" />
+            <span class="error-msg" id="cNameError"></span>
+          </div>
+
+          
+          <div class="form-group">
+            <label for="cEmail">Email Address <span class="required">*</span></label>
+            <input type="email" id="cEmail" placeholder="e.g. sunita@example.com" />
+            <span class="error-msg" id="cEmailError"></span>
+          </div>
+
+          
+          <div class="form-group">
+            <label for="cSubject">Subject</label>
+            <select id="cSubject">
+              <option value="General Enquiry">General Enquiry</option>
+              <option value="Class Timings">Class Timings</option>
+              <option value="Membership">Membership</option>
+              <option value="Feedback">Feedback</option>
+            </select>
+          </div>
+
+          
+          <div class="form-group">
+            <label for="cMessage">Message <span class="required">*</span></label>
+            <textarea id="cMessage" rows="5"
+                      placeholder="Write your message here (min. 20 characters)..."></textarea>
+            <span class="error-msg" id="cMessageError"></span>
+          </div>
+
+          
+          <button type="submit" class="btn btn-submit">Send Message</button>
+
+        </form>
+
+        
+        <div class="thankyou-msg" id="thankyouMsg" style="display:none;">
+          <div class="thankyou-icon">✅</div>
+          <h3>Message Sent!</h3>
+          <p>We'll get back to you within 24 hours.</p>
+          <button class="btn btn-primary" id="sendAnotherBtn">Send Another Message</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  
+
+
+  
+  <footer class="footer">
+    <p>© 2025 FitLife Studio. All rights reserved.</p>
+  </footer>
+
+
+  
+  <script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitLife Studio – Book a Class</title>
+  
+  <link rel="stylesheet" href="css/booking.css" />
+</head>
+<body>
+
+  
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🏋️ FitLife Studio</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="booking.html" class="active">Book Now</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+
+  
+  <div class="page-header">
+    <h1>Book a Class</h1>
+    <p>Fill in your details below to reserve your spot.</p>
+  </div>
+
+
+  
+  <div class="container">
+    <div class="form-card" id="formCard">
+
+      <form id="bookingForm" novalidate>
+
+        
+        <div class="form-section">
+          <h2 class="form-section-title">Personal Information</h2>
+
+          
+          <div class="form-group">
+            <label for="userName">Full Name <span class="required">*</span></label>
+            <input type="text" id="userName" name="userName"
+                   placeholder="e.g. Rohan Kapoor" />
+            
+            <span class="error-msg" id="userNameError"></span>
+          </div>
+
+          
+          <div class="form-group">
+            <label for="userEmail">Email Address <span class="required">*</span></label>
+            <input type="email" id="userEmail" name="userEmail"
+                   placeholder="e.g. rohan@example.com" />
+            <span class="error-msg" id="userEmailError"></span>
+          </div>
+
+          
+          <div class="form-group">
+            <label for="userPhone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="userPhone" name="userPhone"
+                   placeholder="10-digit number" pattern="[0-9]{10}" />
+            <span class="error-msg" id="userPhoneError"></span>
+          </div>
+        </div>
+
+
+        
+        <div class="form-section">
+          <h2 class="form-section-title">Class Selection</h2>
+
+          
+          <div class="form-group">
+            <label for="selectClass">Select Class <span class="required">*</span></label>
+            <select id="selectClass" name="selectClass">
+              <option value="">-- Choose a Class --</option>
+              <option value="Yoga">Yoga</option>
+              <option value="Cardio">Cardio</option>
+              <option value="Meditation">Meditation</option>
+              <option value="Strength Training">Strength Training</option>
+            </select>
+            <span class="error-msg" id="selectClassError"></span>
+          </div>
+
+          
+          <div class="form-group">
+            <label for="selectSlot">Select Time Slot <span class="required">*</span></label>
+            <select id="selectSlot" name="selectSlot">
+              <option value="">-- Choose a Slot --</option>
+              <option value="Morning (6–8 AM)">Morning (6–8 AM)</option>
+              <option value="Afternoon (12–2 PM)">Afternoon (12–2 PM)</option>
+              <option value="Evening (6–8 PM)">Evening (6–8 PM)</option>
+            </select>
+            <span class="error-msg" id="selectSlotError"></span>
+          </div>
+        </div>
+
+
+        
+        <div class="form-section">
+          <h2 class="form-section-title">Schedule</h2>
+
+          
+          <div class="form-group">
+            <label>Select Days <span class="required">*</span></label>
+            <div class="checkbox-row" id="daysGroup">
+              <label class="checkbox-label">
+                <input type="checkbox" name="days" value="Mon" /> Mon
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="days" value="Tue" /> Tue
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="days" value="Wed" /> Wed
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="days" value="Thu" /> Thu
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="days" value="Fri" /> Fri
+              </label>
+            </div>
+            <span class="error-msg" id="daysError"></span>
+          </div>
+
+          
+          <div class="form-group">
+            <label class="checkbox-label repeat-label">
+              <input type="checkbox" id="repeatSession" name="repeatSession" />
+              🔁 Repeat this session for 4 weeks
+            </label>
+          </div>
+        </div>
+
+
+        
+        <div class="form-section">
+          <h2 class="form-section-title">Combo Plans <span class="optional">(optional)</span></h2>
+
+          <div class="form-group">
+            <label for="comboPlan">Add a Combo Plan</label>
+            <select id="comboPlan" name="comboPlan">
+              <option value="">-- None --</option>
+              <option value="Yoga + Meditation (Save ₹500)">Yoga + Meditation (Save ₹500)</option>
+              <option value="Cardio + Strength (Save ₹400)">Cardio + Strength (Save ₹400)</option>
+              <option value="Full Body Plan – All 4 Classes (Save ₹1200)">Full Body Plan – All 4 Classes (Save ₹1200)</option>
+            </select>
+          </div>
+        </div>
+
+
+        
+        
+        <div class="summary-box" id="summaryBox">
+          <h3>📋 Booking Summary</h3>
+          <div class="summary-row">
+            <span class="summary-label">Class:</span>
+            <span class="summary-val" id="sumClass">Not selected</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Time Slot:</span>
+            <span class="summary-val" id="sumSlot">Not selected</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Days:</span>
+            <span class="summary-val" id="sumDays">None chosen</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Combo Plan:</span>
+            <span class="summary-val" id="sumCombo">None</span>
+          </div>
+        </div>
+
+
+        
+        <button type="submit" class="btn btn-submit" id="submitBtn">
+          Confirm Booking
+        </button>
+
+      </form>
+    </div>
+
+
+    
+    <div class="success-card" id="successCard" style="display:none;">
+      
+      <div class="checkmark-circle">
+        <div class="checkmark-tick">✓</div>
+      </div>
+      <h2>Booking Confirmed!</h2>
+      
+      <p id="successMsg">Your sessions have been booked.</p>
+      <button class="btn btn-primary" id="bookAnotherBtn">
+        Book Another Session
+      </button>
+    </div>
+
+  </div>
+  
+
+
+  
+  <footer class="footer">
+    <p>© 2025 FitLife Studio. All rights reserved.</p>
+  </footer>
+
+
+  
+  <script src="js/booking.js"></script>
+</body>
+</html>
